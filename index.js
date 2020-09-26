@@ -1,3 +1,5 @@
+//! server side, to send messages to the client side server.
+
 var express = require("express");
 var socket = require("socket.io");
 

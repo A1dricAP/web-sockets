@@ -1,3 +1,5 @@
+//! client side server, to send and recieve messages from the server side backend.
+
 // Make connection
 var socket = io.connect("http://localhost:4000");
 
