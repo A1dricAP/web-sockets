@@ -9,6 +9,7 @@ var message = document.getElementById("message"),
   feedback = document.getElementById("feedback");
 
 // Emit events
+//* sending chat data to server.
 btn.addEventListener("click", function () {
   socket.emit("chat", {
     message: message.value,
@@ -22,6 +23,7 @@ message.addEventListener("keypress", function () {
 });
 
 // Listen for events
+//* receiving chat data from server, to integrate into html DOM
 socket.on("chat", function (data) {
   feedback.innerHTML = "";
   output.innerHTML +=

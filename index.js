@@ -16,6 +16,8 @@ var io = socket(server); //* Declaring socket to use the already existing "serve
 io.on("connection", function (socket) {
   console.log("made socket connection successfully:", socket.id);
   console.count("Socket connection count");
+
+  //*receiving the data got from the client.
   socket.on("chat", function (data) {
     io.sockets.emit("chat", data);
   });
